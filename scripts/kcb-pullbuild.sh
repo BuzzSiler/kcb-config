@@ -63,7 +63,7 @@ echo "Checkout complete!"
 echo "Cleaning build ..."
 make clean
 echo "Building ..."
-qmake && make
+qmake && make -j4
 echo "Build complete!"
 
 alpha_tag="alpha-$1"
