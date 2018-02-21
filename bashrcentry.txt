@@ -1,0 +1,10 @@
+# The following must be added to the end of the .bashrc file
+# to setup the KCB envinronment and launch the KCB application
+
+if [ -f kcb.conf ]; then
+    source kcb.conf
+    $KCBSCRIPTS/kcb-start.sh
+else
+    echo "ERROR: kcb configuration file not found"
+
+fi
