@@ -16,4 +16,4 @@ KCBVNC_CONF=$KCBCONFIG_ROOT/config/x11vnc.cfg
 # Use the following for development only
 unset KCBVNCOVERRIDE
 # Uncomment to prevent the vnc server script from being run
-#export KCBVNCOVERRIDE=
+export KCBVNCOVERRIDE=
