@@ -29,6 +29,14 @@ start script is invoked.
 # KCB Images
 
 # KCB Database
+# Creates various versions of databases depending on the need.
+#    - Create a default empty database
+#    - Create a default database with default admin values
+#    - Create a test database
+# The script will be driven by the schema version: 0.1, 0.2, 0.3, etc.
+#    kcb-createdb.sh <version> <empty|default|test>
+# Note: This is a destructive process.  If you want to save your database then you need to 
+# go to /home/pi/run/ and copy Alpha.db to another name.
 
 # KCB Logs
 
