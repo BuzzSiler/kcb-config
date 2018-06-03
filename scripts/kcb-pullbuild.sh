@@ -8,6 +8,7 @@ echo "    - pull the specified tag from GitHub"
 echo "    - clean and build the repo"
 echo "    - copy the binary to the bin directory"
 echo "    - fix up the symbolic link"
+echo "    - DELETE any existing database"
 echo "------------------------------------------"
 
 echo ""
@@ -82,6 +83,9 @@ echo "Link created!"
 ls -la /usr/local/bin/alpha
 
 rm -rf $KCBDEV/$repo_name
+
+echo "Deleting the existing database"
+rm /home/pi/run/Alpha.db
 
 echo "Done!"
 
