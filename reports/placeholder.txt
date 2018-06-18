@@ -1,0 +1,1 @@
+This is a placeholder file used to ensure the reports directory is created when clone the kcb-config repo.  The reports directory is used by the application to store report files.
