@@ -33,13 +33,15 @@ fi
 #    sudo mv /home/pi/bin/Alpha_NEW /usr/local/bin/alpha
 #fi
 # This is a new way (untested)
-NEWFILE='$KCBBIN/*_NEW'
-if [ -f $NEWFILE ];
+NEWFILE=`ls $KCBBIN/*_NEW`
+if [ -f "$NEWFILE" ];
 then
+    alpha=$NEWFILE
     # root filename is *, so strip off '_NEW'
-    alpha=${NEWFILE%_NEW}
+    alpha=${alpha%_NEW}
     alpha=${alpha##*/}
     mv $NEWFILE $KCBBIN/$alpha
+    sudo chmod +x $KCBBIN/$alpha
     $KCBSCRIPTS/kcb-link.sh $KCBBIN/$alpha
 fi
 
