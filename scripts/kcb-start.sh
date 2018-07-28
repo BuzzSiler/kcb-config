@@ -20,6 +20,7 @@ source $KCBCONFIG
 NEWFILE=`ls $KCBBIN/*_NEW`
 if [ -f "$NEWFILE" ];
 then
+    echo "Found new file" $NEWFILE
     alpha=$NEWFILE
     # root filename is *, so strip off '_NEW'
     alpha=${alpha%_NEW}
