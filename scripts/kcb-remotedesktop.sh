@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 source $KCBCONFIG
-#source /home/pi/kcb-config/kcb.conf
 
 ps aux | grep autoport | cut -d' ' -f8 | xargs kill -9 &
 ps aux | grep autoport | cut -d' ' -f9 | xargs kill -9 &

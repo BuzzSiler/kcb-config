@@ -5,22 +5,6 @@
 
 source $KCBCONFIG
 
-#---------------------KCB Development -----------------------
-# Use the following for development only
-#unset KCBVNCOVERRIDE
-# Uncomment to prevent the vnc server script from being run
-#export KCBVNCOVERRIDE=
-
-# Allow kcb to be started without starting the vncserver
-# Default, as called from .bashrc, is to start vncserver
-# Setting the variable KCBVNCOVERRIDE will prevent vncserver
-# from being started in an SSH session.
-
-#------------------------ KCB VNC ----------------------------
-if [ ! -v KCBVNCOVERRIDE ]; then
-    $KCBSCRIPTS/kcb-remotedesktop.sh
-fi
-
 #------------------------ KCB Update -------------------------
 # Handle new binary update
 # Note: This approach is flawed wrt to database changes
@@ -39,10 +23,16 @@ then
     alpha=$NEWFILE
     # root filename is *, so strip off '_NEW'
     alpha=${alpha%_NEW}
+    # strip off leading path
     alpha=${alpha##*/}
     mv $NEWFILE $KCBBIN/$alpha
-    sudo chmod +x $KCBBIN/$alpha
     $KCBSCRIPTS/kcb-link.sh $KCBBIN/$alpha
+    sudo chmod +x $KCBBIN/$alpha
+fi
+
+#------------------------ KCB VNC ----------------------------
+if [ ! -v KCBVNCOVERRIDE ]; then
+    $KCBSCRIPTS/kcb-remotedesktop.sh
 fi
 
 #----------------------- KCB Launch --------------------------
