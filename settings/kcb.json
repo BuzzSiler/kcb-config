@@ -1,5 +1,5 @@
 {
-"enable_fleetwave":false,
+"enable_fleetwave":true,
 "cabinets": [
    {
       "model":"KB32",
