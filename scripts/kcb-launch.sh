@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
 source $KCBCONFIG
-pcsc_scan &
+if pgrep -x "pcsc_scan" > /dev/null
+then
+    echo "pcsc scan is running"
+else
+    pcsc_scan &
+fi
 sudo alpha -nograb -style motif &> $KCBLOGS
