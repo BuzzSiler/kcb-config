@@ -2,6 +2,13 @@
 
 source $KCBCONFIG
 
+if [ "$KCBDEV" == "" ];
+then
+    echo "~/kcb.conf has not been sourced.  Please check .bashrc or other"
+    echo "configuration scripts to ensure it is source before calling this script"
+    exit 1
+fi
+
 echo "-----------------------------------------"
 echo "This script will do the following:"
 echo "    - pull the specified tag from GitHub"

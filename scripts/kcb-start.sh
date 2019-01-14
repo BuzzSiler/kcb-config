@@ -32,8 +32,12 @@ then
 fi
 
 #------------------------ KCB VNC ----------------------------
-if [ ! -v KCBVNCOVERRIDE ]; then
+if ! pgrep -x "x11vnc" > /dev/null;
+then
+    echo "VNC is not running.  Starting now..."
     $KCBSCRIPTS/kcb-remotedesktop.sh
+else
+    echo "VNC is running"
 fi
 
 #----------------------- KCB Launch --------------------------
