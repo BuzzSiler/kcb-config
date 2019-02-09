@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo $KCBCONFIG
 source $KCBCONFIG
 
 if [ "$KCBDEV" == "" ];

@@ -4,7 +4,7 @@ KCBSCRIPTS=$KCBCONFIG_ROOT/scripts
 KCBBIN=$KCBCONFIG_ROOT/bin
 KCBRUN=$KCBCONFIG_ROOT/run
 KCBLOGS=$KCBCONFIG_ROOT/logs/stderr.log
-KCBDEV=~/dev
+KCBDEV=/home/pi/dev
 KCBREPO=https://github.com/BuzzSiler/keycodebox-key.git
 KCBDB=$KCBCONFIG_ROOT/database
 
