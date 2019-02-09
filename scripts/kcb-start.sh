@@ -26,7 +26,7 @@ then
     alpha=${alpha%_NEW}
     # strip off leading path
     alpha=${alpha##*/}
-    mv $NEWFILE $KCBBIN/$alpha
+    mv -f $NEWFILE $KCBBIN/$alpha
     $KCBSCRIPTS/kcb-link.sh $KCBBIN/$alpha
     sudo chmod +x $KCBBIN/$alpha
 fi
