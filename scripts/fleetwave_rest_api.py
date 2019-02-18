@@ -2,16 +2,29 @@ import requests
 import xmltodict
 from xml.parsers.expat import ExpatError
 from logger import logging
+import json
 
+BASEURL_DEFAULT = "https://fw2.fleetwave.com/dev"
+
+
+reservation2_baseurl = BASEURL_DEFAULT
+transaction2_baseurl = BASEURL_DEFAULT
+try:
+    with open('/home/pi/kcb-config/settings/chevin.json') as json_file:  
+        data = json.load(json_file)
+        reservation2_baseurl = transaction2_baseurl = data["baseurl"]
+except:
+    logging.fatal("Failed to open config file chevin.json")
+    pass
 
 # Chevin URLs
-reservation2_base = 'https://fw2.fleetwave.com/dev/script/webservices/safepak_interface.asmx/Reservation2?'
+reservation2_service = 'script/webservices/safepak_interface.asmx/Reservation2?'
 reservation2_params = 'clientName={client}&reservationNumber=&authMethod=&HIDcode=&kioskNumber={kiosk_number}&payrollNumber={payroll_number}'
-reservation2_url = '{base}{params}'.format(base=reservation2_base, params=reservation2_params)
+reservation2_url = '{baseurl}/{webservice}{params}'.format(baseurl=reservation2_baseurl, webservice=reservation2_service, params=reservation2_params)
 
-transaction_complete2_base = 'https://fw2.fleetwave.com/dev/script/webservices/safepak_interface.asmx/TransactionComplete2?'
+transaction_complete2_service = 'script/webservices/safepak_interface.asmx/TransactionComplete2?'
 transaction_complete2_params = 'clientName={client}&transactionNumber={transaction_number}&reservationNumber=&status={status}&question1={question_1}&question2={question_2}&question3={question_3}&UDF1=&UDF2=&UDF3=&UDF4=&UDF5=&UDF6=&authMethod=&HIDcode=&payrollNumber={payroll_number}'
-transaction_complete2_url = '{base}{params}'.format(base=transaction_complete2_base, params=transaction_complete2_params)
+transaction_complete2_url = '{baseurl}/{webservice}{params}'.format(baseurl=transaction2_baseurl, webservice=transaction_complete2_service, params=transaction_complete2_params)
 
 chevin_rest = { 'Reservation2' : reservation2_url,
                 'transactionComplete2' : transaction_complete2_url
