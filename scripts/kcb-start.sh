@@ -5,18 +5,12 @@
 
 source $KCBCONFIG
 
+#------------------------  KCB Name  ------------------------
+sudo $KCBSCRIPTS/kcb-hostname.sh
+
 #------------------------ KCB Update -------------------------
 # Handle new binary update
-# Note: This approach is flawed wrt to database changes
 
-# This was the old way
-#FILE='/home/pi/bin/Alpha_NEW'
-#if [ -f $FILE ];
-#then
-#    sudo rm -rf /usr/local/bin/alpha
-#    sudo mv /home/pi/bin/Alpha_NEW /usr/local/bin/alpha
-#fi
-# This is a new way (untested)
 NEWFILE=`ls $KCBBIN/*_NEW`
 if [ -f "$NEWFILE" ];
 then
