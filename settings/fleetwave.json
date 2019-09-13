@@ -1,0 +1,31 @@
+{
+    "appAuthTimeout": "30",
+    "appIdleTimeout": "5",
+    "appLevelOneTimeout": "20",
+    "appLevelTwoTimeout": "10",
+    "appPostProcessingTimeout": "5",
+    "appQuestionsTimeout": "20",
+    "authLevel": "One Factor",
+    "availableQuestions": [
+        "Does the Vehicle need maintenance?",
+        "Is Vehicle In Safe Operating Condition?",
+        "Is Vehicle Clean Free Of Trash?",
+        "Is Vehicle Fuel Tank At Least Half Full?"
+    ],
+    "client": "DCWATER",
+    "hidDevice": "OmniKey 5427CK (5427-SC)",
+    "kiosk": "1",
+    "levelOne": 3,
+    "levelTwo": 1,
+    "secure": true,
+    "selectedQuestions": [
+        "Is Vehicle In Safe Operating Condition?",
+        "Is Vehicle Clean Free Of Trash?",
+        "Is Vehicle Fuel Tank At Least Half Full?"
+    ],
+    "selectedUrl": "https://fw2.fleetwave.com/dev",
+    "urls": [
+        "https://fw2.fleetwave.com/dev",
+        "https://fw2.fleetwave.com/test"
+    ]
+}
