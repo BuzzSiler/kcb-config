@@ -77,7 +77,7 @@ def DoReservation(client_name, kiosk_number, card_id, action):
             <action>ACTION</action>
             NOTE: Ignore the Payroll number returned
             <Payrollnumber>10307</Payrollnumber>
-        </Result> 
+        </Result>
     '''
     logging.debug("ClientName: %s", client_name)
     logging.debug("KioskNumber: %s", kiosk_number)

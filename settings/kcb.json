@@ -1,16 +1,16 @@
 {
     "adminEmail": "admin@admin.com",
-    "adminName": "ADMIN",
-    "adminPassword": "",
+    "adminName": "admin",
+    "adminPassword": "AwJQ4U8=",
     "adminPhone": "1112223456",
-    "assistPassword": "AwK+rGldphhu",
+    "assistPassword": "AwJQ4U8=",
     "autocode": {
         "committed": false,
         "email": false,
         "enabled": false,
         "key": "",
         "next_gen_datetime": "",
-        "password": "AwJq23U="
+        "password": "AwL4Sec="
     },
     "cabinets": [
         {
@@ -31,12 +31,11 @@
         }
     ],
     "display": true,
-    "displayShowHideButton": true,
+    "displayShowHideButton": false,
     "displayTakeReturnButtons": false,
     "enable_fleetwave": true,
-    "hidDevice": "OmniKey 5427 CF (5427 SC)",
     "hwDiscoveryOnStartup": false,
-    "idleTimeout": 60,
+    "idleTimeout": 30,
     "internetTime": true,
     "lock_selection": 1,
     "powerDownTimeout": 0,
@@ -56,7 +55,7 @@
         "mask": "0.0.0.0"
     },
     "vnc": {
-        "password": "keycodebox",
+        "password": "kcb",
         "port": 5901
     }
 }

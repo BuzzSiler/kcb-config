@@ -1,0 +1,2 @@
+vncport="$(cat /home/pi/kcb-config/config/vnc_creds.txt | cut -d'|' -f2 | cut -d' ' -f1)"
+x11vnc -bg -nevershared -forever -display :0 -autoport $vncport -rfbauth /home/pi/kcb-config/config/x11vnc.cfg -o /home/pi/kcb-config/logs/x11vnc.log

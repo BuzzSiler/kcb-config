@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Turn off display power
+# Application will turn it back on
+#vcgencmd display_power 0
+
 #-------------------- KCB Configuration ---------------------
 # Point to the kcb configuration file and source it
 
@@ -26,13 +30,13 @@ then
 fi
 
 #------------------------ KCB VNC ----------------------------
-if ! pgrep -x "x11vnc" > /dev/null;
-then
-    echo "VNC is not running.  Starting now..."
-    $KCBSCRIPTS/kcb-remotedesktop.sh
-else
-    echo "VNC is running"
-fi
+#if ! pgrep -x "x11vnc" > /dev/null;
+#then
+#    echo "VNC is not running.  Starting now..."
+#    $KCBSCRIPTS/kcb-remotedesktop.sh
+#else
+#    echo "VNC is running"
+#fi
 
 #----------------------- KCB Launch --------------------------
 $KCBSCRIPTS/kcb-launch.sh
