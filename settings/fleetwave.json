@@ -13,20 +13,19 @@
     ],
     "clientName": "DCWATER",
     "firstFactorInput": 1,
-    "hidDevice": "OmniKey 5427CK (5427-SC)",
+    "hidDevice": "OmniKey 5427CK (5428)",
     "kioskNumber": "10",
-    "payrollNumber": "3",
     "secondFactorInput": 2,
-    "secure": true,
-    "secureCardKey": "QXdKTkJGNHltZ1ltZCs1cDlwczNxSXpRVDdva01wbDhMUUdlRjQvc1RkVDEyelBETHc9PQ==",
+    "secure": false,
+    "secureCardKey": "",
     "selectedQuestions": [
         "Is The Vehicle Clean?",
         "Does The Vehicle Need Fuel?",
         "Is The Vehicle In Good Operating Condition?"
     ],
-    "selectedUrl": "https,//fw2.fleetwave.com/Test",
+    "selectedUrl": "https://fw2.fleetwave.com/Test",
     "urls": [
-        "https,//fw2.fleetwave.com/dev",
-        "https,//fw2.fleetwave.com/Test"
+        "https://fw2.fleetwave.com/dev",
+        "https://fw2.fleetwave.com/Test"
     ]
 }
