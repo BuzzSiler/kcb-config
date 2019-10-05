@@ -1,8 +1,8 @@
 {
-    "adminEmail": "admin@admin.com",
-    "adminName": "admin",
+    "adminEmail": "",
+    "adminName": "",
     "adminPassword": "AwJQ4U8=",
-    "adminPhone": "1112223456",
+    "adminPhone": "",
     "assistPassword": "AwJQ4U8=",
     "autocode": {
         "committed": false,
@@ -16,35 +16,34 @@
         {
             "addr": "b104",
             "model": "KCB32",
-            "num_locks": 32,
+            "num_locks": 16,
             "start": 1,
-            "stop": 32,
+            "stop": 16,
             "sw_version": "04.00"
         },
         {
             "addr": "d338",
             "model": "KCB32",
-            "num_locks": 32,
-            "start": 33,
-            "stop": 64,
+            "num_locks": 8,
+            "start": 17,
+            "stop": 24,
             "sw_version": "03.04"
         }
     ],
     "display": true,
     "displayShowHideButton": false,
     "displayTakeReturnButtons": false,
-    "enable_fleetwave": true,
+    "enableFleetwave": true,
     "hwDiscoveryOnStartup": false,
-    "idleTimeout": 30,
-    "internetTime": true,
+    "internetTime": false,
     "lock_selection": 1,
     "powerDownTimeout": 0,
     "smtp": {
-        "password": "keycodebox",
-        "port": 465,
-        "server": "smtpout.secureserver.net",
-        "type": 1,
-        "username": "kcb@keycodebox.com"
+        "password": "",
+        "port": 0,
+        "server": "",
+        "type": 0,
+        "username": ""
     },
     "static_ip": {
         "address": "0.0.0.0",
@@ -55,7 +54,7 @@
         "mask": "0.0.0.0"
     },
     "vnc": {
-        "password": "kcb",
+        "password": "keycodebox",
         "port": 5901
     }
 }
