@@ -23,9 +23,9 @@
         "Does The Vehicle Need Fuel?",
         "Is The Vehicle In Good Operating Condition?"
     ],
-    "selectedUrl": "https://fw2.fleetwave.com/Test",
+    "selectedUrl": "https,//fw2.fleetwave.com/Test",
     "urls": [
-        "https://fw2.fleetwave.com/dev",
-        "https://fw2.fleetwave.com/Test"
+        "https,//fw2.fleetwave.com/dev",
+        "https,//fw2.fleetwave.com/Test"
     ]
 }
