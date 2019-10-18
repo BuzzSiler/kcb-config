@@ -1,32 +1,20 @@
 {
-    "adminEmail": "",
-    "adminName": "",
-    "adminPassword": "AwJQ4U8=",
-    "adminPhone": "",
-    "assistPassword": "AwJQ4U8=",
-    "autocode": {
-        "committed": false,
-        "email": false,
-        "enabled": false,
-        "key": "",
-        "next_gen_datetime": "",
-        "password": "AwL4Sec="
-    },
+    "adminPassword": "AwLA0dXrF7PCxX2pZV++",
     "cabinets": [
         {
             "addr": "b104",
             "model": "KCB32",
-            "num_locks": 16,
+            "num_locks": 8,
             "start": 1,
-            "stop": 16,
+            "stop": 8,
             "sw_version": "04.00"
         },
         {
             "addr": "d338",
             "model": "KCB32",
             "num_locks": 8,
-            "start": 17,
-            "stop": 24,
+            "start": 9,
+            "stop": 16,
             "sw_version": "03.04"
         }
     ],
@@ -35,17 +23,10 @@
     "displayTakeReturnButtons": false,
     "enableFleetwave": true,
     "hwDiscoveryOnStartup": false,
-    "internetTime": false,
-    "lock_selection": 1,
+    "internetTime": true,
+    "lockSelection": 1,
     "powerDownTimeout": 0,
-    "smtp": {
-        "password": "",
-        "port": 0,
-        "server": "",
-        "type": 0,
-        "username": ""
-    },
-    "static_ip": {
+    "staticIp": {
         "address": "0.0.0.0",
         "broadcast": "0.0.0.0",
         "dns": "0.0.0.0",
