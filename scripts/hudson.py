@@ -77,24 +77,26 @@ if __name__ == '__main__':
     logging.info(sys.argv)
     if len(sys.argv) > 1:
         key = sys.argv[1]
-        
-        while True:
-            logging.info("Starting ...")
-            try:
-                cardmonitor = CardMonitor()
-                selectobserver = ReadCardNumber(key)
-                cardmonitor.addObserver(selectobserver)
-                sleep_forever()
-            except Exception as e:
-                logging.error("Error: failure during card processing - {}".format(e.message), exc_info=True)
+        if len(key) == 32:
+            while True:
+                logging.info("Starting ...")
+                try:
+                    cardmonitor = CardMonitor()
+                    selectobserver = ReadCardNumber(key)
+                    cardmonitor.addObserver(selectobserver)
+                    sleep_forever()
+                except Exception as e:
+                    logging.error("Error: failure during card processing - {}".format(e.message), exc_info=True)
 
-            finally:
-                # don't forget to remove observer, or the
-                # monitor will poll forever...
-                cardmonitor.deleteObserver(selectobserver)
-                del selectobserver
-                del cardmonitor
-                logging.info("Stopped")
+                finally:
+                    # don't forget to remove observer, or the
+                    # monitor will poll forever...
+                    cardmonitor.deleteObserver(selectobserver)
+                    del selectobserver
+                    del cardmonitor
+                    logging.info("Stopped")
+        else:
+            logging.warn("Invalid key")
     else:
         logging.error("Error: security failure - invalid key")
 
