@@ -88,10 +88,10 @@ class SecureChannelComms():
                 self.__serverChallengeRandB = response[2+8:2+8+8]
                 self.__serverCryptogramLen = 16
                 self.__serverCryptogram = response[2+8+8:2+8+8+16]
-                logging.debug("verify init auth ok")
+                #logging.debug("verify init auth ok")
                 return True
 
-        logging.info("verify init auth failed")
+        #logging.info("verify init auth failed")
         return False
     
     def __ComputeSecureChannelBaseKey(self):
@@ -279,7 +279,7 @@ class SecureChannelComms():
     #----------------------------------------------------------------------------------------------
 
     def Open(self):
-        logging.info("Opening secure channel")
+        #logging.info("Opening secure channel")
         init_auth_msg = self.__init_auth()
 
         try:
@@ -288,10 +288,10 @@ class SecureChannelComms():
             logging.error("Error: sending auth message - {}".format(str(e)), exc_info=True)
             return False
 
-        logging.debug("calling verify init auth")
+        #logging.debug("calling verify init auth")
         go_nogo = self.__verify_init_auth(response, sw1, sw2)
         if go_nogo:
-            logging.debug("calling cont auth 1")
+            #logging.debug("calling cont auth 1")
             if self.__cont_auth1():
                 auth2_msg = self.__CreateAuth2Message()
                 try:
@@ -302,7 +302,7 @@ class SecureChannelComms():
 
                 if (sw1 == 0x90 and sw2 == 0x00):
                     if self.__cont_auth2(response):
-                        logging.info("secure channel open")
+                        logging.info("secure session open")
                         return True
                 else:
                     logging.warn("Error in auth2 message response")
@@ -348,7 +348,7 @@ class SecureChannelComms():
                 card_number_bytes[0] = card_number_bytes[0] & 0x03
                 str_value = ''.join(["{0:02X}".format(i) for i in card_number_bytes])
                 card_number = str(int(str_value, 16) >> 6)
-                logging.info("Read card number: %s" % card_number)
+                #logging.info("Read card number: %s" % card_number)
                 return card_number
 
         return None
