@@ -15,8 +15,6 @@ sudo $KCBSCRIPTS/kcb-hostname.sh
 #------------------------ KCB Update ------------------------
 $KCBSCRIPTS/kcb-update.sh
 
-#----------------------- PCSC SCAN --------------------------
-$KCBSCRIPTS/kcb-pcscscan.sh
 
 #----------------------- KCB Launch -------------------------
 $KCBSCRIPTS/kcb-launch.sh
