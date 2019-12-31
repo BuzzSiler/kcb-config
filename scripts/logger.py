@@ -1,7 +1,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-LOG_FILE="/home/pi/kcb-config/logs/chevin.log"
+LOG_FILE="/home/pi/kcb-config/logs/securecard.log"
 
 # Setup logging
 logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',

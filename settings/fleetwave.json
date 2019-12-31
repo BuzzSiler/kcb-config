@@ -11,22 +11,22 @@
         "Does The Vehicle Need Fuel?",
         "Is The Vehicle In Good Operating Condition?"
     ],
-    "clientName": "DCWATER",
-    "demoEnabled": true,
+    "clientName": "DC WATER",
+    "demoEnabled": false,
     "firstFactorInput": 1,
     "hidDevice": "OmniKey 5427CK (5428)",
     "kioskNumber": "10",
     "secondFactorInput": 2,
     "secure": false,
-    "secureCardKey": "",
+    "secureCardKey": "AwLhUP4=",
     "selectedQuestions": [
         "Is The Vehicle Clean?",
         "Does The Vehicle Need Fuel?",
         "Is The Vehicle In Good Operating Condition?"
     ],
-    "selectedUrl": "https://fw2.fleetwave.com/dev",
+    "selectedUrl": "https://fw2.fleetwave.com/Test",
     "urls": [
-        "https://fw2.fleetwave.com/Test",
-        "https://fw2.fleetwave.com/dev"
+        "https://fw2.fleetwave.com/dev",
+        "https://fw2.fleetwave.com/Test"
     ]
 }
