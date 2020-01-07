@@ -1,4 +1,0 @@
-logrotate state -- version 2
-"/home/pi/kcb-config/logs/pcscscan.log" 2019-11-1-12:0:0
-"/home/pi/kcb-config/logs/x11vnc.log" 2019-11-1-12:0:0
-"/home/pi/kcb-config/logs/stderr.log" 2019-11-1-12:0:0
